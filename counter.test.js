@@ -12,5 +12,4 @@ describe('counter', () => {
   it('returns "Green: 1" when input is "Green" ', () => {
     expect(counter("Green")).toEqual("Green: 1");
   });
-
 });
