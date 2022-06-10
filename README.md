@@ -1,11 +1,16 @@
-School reports company
-Tests results helping teachers
-Read string of "," results (values) "Green, Green, Red, Amber, Red"
-Return string of "," results (values) "Green: 2\nAmber: 1\nRed: 2"
-Build simple report
+# Counter
 
-INPUT | OUTPUT
-"Red" | "Red: 1"
-"Amber, Red" | "Amber: 1\nRed: 1"
-"Green, Amber, Red" | "Green: 1\nAmber: 1\nRed: 1"
-"Green, Amber, Red, Pink" | "Green: 1\nAmber: 1\nRed: 1,1\nUncounted: 1"
+Build a simple program, which will help teachers to generate report and sorting student test results.
+
+Example of input: "Green, Green, Red, Amber, Red".  
+Example of output: "Green: 2\nAmber: 1\nRed: 2".
+
+---
+## Input and Output for TDD
+
+| INPUT | OUTPUT |
+| ----- | ------ |
+| `"Red"` | `"Red: 1"` |
+| `"Amber, Red"` | `"Amber: 1\nRed: 1"` |
+| `"Green, Amber, Red"` | `"Green: 1\nAmber: 1\nRed: 1"` |
+| `"Green, Amber, Red, Pink, Purple, Blue"` | `"Green: 1\nAmber: 1\nRed: 1,1\nUncounted: 3"` |

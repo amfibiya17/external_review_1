@@ -1,5 +1,11 @@
 function counter(string) {
-  return "Red: 1";
+
+  if(string === "Red") {
+    return "Red: 1";
+  } else {
+    return "Amber: 1";
+  }
+  
 }
 
 module.exports = counter;
