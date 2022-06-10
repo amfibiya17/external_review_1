@@ -12,4 +12,8 @@ describe('counter', () => {
   it('returns "Green: 1" when input is "Green" ', () => {
     expect(counter("Green")).toEqual("Green: 1");
   });
+
+  it('returns "Uncounted: 1" when input is "Purple" ', () => {
+    expect(counter("Purple")).toEqual("Uncounted: 1");
+  });
 });
