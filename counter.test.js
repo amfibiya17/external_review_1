@@ -8,4 +8,9 @@ describe('counter', () => {
   it('returns "Amber: 1" when input is "Amber" ', () => {
     expect(counter("Amber")).toEqual("Amber: 1");
   });
+
+  it('returns "Green: 1" when input is "Green" ', () => {
+    expect(counter("Green")).toEqual("Green: 1");
+  });
+
 });
