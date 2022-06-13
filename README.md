@@ -13,4 +13,6 @@ Example of output: "Green: 2\nAmber: 1\nRed: 2".
 | `"Red"` | `"Red: 1"` |
 | `"Amber"` | `"Amber: 1"` |
 | `"Green"` | `"Green: 1"` |
-| `"Green, Amber, Red, Pink, Purple, Blue"` | `"Green: 1\nAmber: 1\nRed: 1,1\nUncounted: 3"` |
+| `Purple`  | `Uncounted: 1` |
+| `Red, Red, Red` | `Red: 3` |
+| `"Green, Green, Amber, Red, Pink, Purple, Blue, Red, Amber"` | `"Green: 2\nAmber: 2\nRed: 2n\nUncounted: 3"` |

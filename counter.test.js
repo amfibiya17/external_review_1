@@ -20,4 +20,8 @@ describe('counter', () => {
   it('returns "Red: 3" when input is "Red, Red, Red" ', () => {
     expect(counter("Red, Red, Red")).toEqual("Red: 3");
   });
+
+  // it('returns "Green: 2\nAmber: 2\nRed: 2\nUncounted: 3" when input is "Green, Green, Amber, Red, Pink, Purple, Blue, Red, Amber" ', () => {
+  //   expect(counter("Green, Green, Amber, Red, Pink, Purple, Blue, Red, Amber")).toEqual("Green: 2\nAmber: 2\nRed: 2\nUncounted: 3");
+  // });
 });
