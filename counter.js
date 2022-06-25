@@ -1,36 +1,37 @@
 function counter(string) {
   const array = string.split(", ");
   const counts ={};
-
+  
   // 1. count each color
   for ( var i = 0; i < array.length; i += 1) {
-    counts[array[i]] = 1 + ( counts[array[i]] || 0 );
-    if(array[i] === "Purple") {
-      return array[i] = `Uncounted: ${counts[array[i]]}`;
+    if(array[i] === "Red") {
+      counts[array[i]] = 1 + ( counts[array[i]] || 0 );
     } else if(array[i] === "Green") {
-      return array[i] = `Green: ${counts[array[i]]}`
+      counts[array[i]] = 1 + ( counts[array[i]] || 0 );
     } else if(array[i] === "Amber") {
-      return array[i] = `Amber: ${counts[array[i]]}`
-    } else if(array[i] === "Red") {
-      return array[i] = `Red: ${counts[array[i]]}`
+      counts[array[i]] = 1 + ( counts[array[i]] || 0 );
+    } else {
+      counts[`Uncounted`] = 1 + ( counts[`Uncounted`] || 0 );
     }
   };
-
-  // 2. create empty result string
-  // 3. build string from results in count: for (const color in count) { add colour and count to string }
-
-  return counts;
-
-  // if(array[0] === "Red") {
-  //   return `Red: ${arrayLength}`;
-  // } else if(string === "Green") {
-  //   return "Green: 1";
-  // } else if(string === "Amber") {
-  //   return "Amber: 1";
-  // } else {
-  //   return "Uncounted: 1";
-  // }
   
+  // 2. create empty result string
+  let result = '';
+
+  // 3. build string from results in count
+  if(array.includes("Green")) {
+    result += `Green: ${counts['Green']}\n`
+  }
+  if(array.includes("Amber")) {
+    result += `Amber: ${counts['Amber']}\n`
+  }
+  if(array.includes("Red")) {
+    result += `Red: ${counts['Red']}\n`
+  }
+  if(counts[`Uncounted`]) {
+    result += `Uncounted: ${counts['Uncounted']}`;
+  }
+  return result.trim();
 }
 
 let string = "Green, Amber, Red, Purple, Red, Amber";
