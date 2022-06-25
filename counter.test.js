@@ -26,4 +26,16 @@ describe('counter', () => {
       counter('Green, Green, Amber, Red, Pink, Purple, Blue, Red, Amber')
     ).toEqual('Green: 2\nAmber: 2\nRed: 2\nUncounted: 3');
   });
+
+  it('returns "Green: 3\nAmber: 2\nRed: 3\nUncounted: 1" when input is "Green, Green, Amber, Red, Blue, Red, Amber, Red, Green" ', () => {
+    expect(
+      counter('Green, Green, Amber, Red, Blue, Red, Amber, Red, Green')
+    ).toEqual('Green: 3\nAmber: 2\nRed: 3\nUncounted: 1');
+  });
+
+  it('returns "Red: 2\nUncounted: 3" when input is "Red, Pink, Purple, Blue, Red" ', () => {
+    expect(counter('Red, Pink, Purple, Blue, Red')).toEqual(
+      'Red: 2\nUncounted: 3'
+    );
+  });
 });
